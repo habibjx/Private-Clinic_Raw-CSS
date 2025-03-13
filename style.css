@@ -400,7 +400,6 @@ section h1::after{
 /* =============== testimonials ===============  */
 .testo-wrapper{
     margin-top: 30px;
-    border-top: 1px solid red;
     position: relative;
 }
 .chevron-left,
@@ -507,21 +506,21 @@ section h1::after{
     margin-bottom: 10px;
 }
 
-/* contact us section style start  */
-.contact-us{
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--primary-color);
-}
+/* ===================== contact us =====================  */
+
 .contact-container{
     display: flex;
-    gap: 77px;
-    margin-top: 40px;
+    gap: 20px;
+    margin-top: 30px;
 }
-.contact-container .faqs-container{
-    width: 530px;
+.contact-container > *{
+    flex: 1;
+}
+.faqs-container{
+    overflow: auto;
 }
 .faqs-container h2{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .faqs-container .fqa{
     width: 100%;
@@ -531,10 +530,14 @@ section h1::after{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: var(--small-shadow);
     padding: 5px 10px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     cursor: pointer;
+    border-bottom: 1px solid #d2d2d2;
+    transition: .3s ease;
+}
+.fqa label:hover{
+    box-shadow: var(--small-shadow);
 }
 .fqa label span{
     font-family: var(--secondary-font);
@@ -549,8 +552,7 @@ section h1::after{
     padding: 5px 10px;
     font-family: var(--secondary-font);
     font-size: var(--small-text-size);
-    display: none;
-     
+    display: none;   
 }
 .fqa input{
     display: none;
@@ -566,29 +568,49 @@ section h1::after{
     transform: rotate(45deg);
 }
 
-/* form  */
-.contact-container form {
-    width: 454px;
-}
+/* ====== form =======  */
+
 .contact-container form > input,
 .contact-container form textarea{
-    display: block;
     width: 100%;
     box-shadow: var(--small-shadow);
     margin-top: 20px;
     padding: 10px 20px;
-    border-radius: 6px;
-
+    border-radius: 5px;
 }
-.imPatient{
+.form-checkbox{
     margin-top: 20px;
     font-family: var(--secondary-font);
     font-size: var(--base-text-size);
     display: flex;
     align-items: center;
 }
-.imPatient input{
+.form-checkbox label{
+    border: 2px solid var(--primary-color);
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.form-checkbox label::after{
+    content: '✓';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 2px;
+    top: -12px;
+    font-size: 25px;
+    transform: rotate(12deg);
+    color: var(--primary-color);
+    display: none;
+}
+.form-checkbox input{
+    display: none;
+}
+#patient-checkbox:checked ~  label::after{
+    display: block;
 }
 .contact-container > form > :last-child{
     background: var(--primary-color);
