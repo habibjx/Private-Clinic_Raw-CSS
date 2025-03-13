@@ -18,6 +18,7 @@
     --bg-color: #F8FAFC;
     --text-color: #1E293B;
     --gray-text-color: #1E293BB2;
+    --gray-text-color: #1E293BB2;
     --light-gray: #E5E7EB;
     --white-light: #ffffff;
     --small-shadow:  0 1px 2px rgba(0, 0, 0, 0.25);
@@ -171,7 +172,6 @@ main{
     width: 100%;
     max-width: 1220px;
     margin: auto;
-    border: 1px solid red;
 }
 section{
     margin-top: 80px;
@@ -620,119 +620,82 @@ section h1::after{
     cursor: pointer;
 }
 
-/* contact us section style end */
-
-
-/* main section style end */
-
-
 /* ===================== footer =====================  */
+
 footer{
-    background: linear-gradient(to right, #0084FF, #34D399);
     width: 100%;
+    margin: 80px auto auto auto;
+    background: #E5E7EB;
+    color: var(--gray-text-color);
 }
 footer .footer-container{
-    width: 1060px;
-    margin: 80px auto 0 auto;
+    width: 100%;
+    max-width: 1220px;
+    margin: auto;
     padding-top: 80px;
 }
 footer img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
-footer .footer-container .up-footer{
+footer .up-footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* gap: 10px; */
     padding-bottom: 40px;
     border-bottom: 1px solid var(--text-color);
-    border: 1px solid red;
 }
-footer .footer-container .up-footer .col{
+footer .col{
     width: fit-content;
-    border: 1px solid red;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
 }
-footer .footer-container .up-footer .col logo{
-    width: 100px;
-    height: 100px;
+footer .col1{
+    
 }
-footer .footer-container .up-footer .col h2{
-    font-size: var(--header-size);
-    font-weight: var(--bold);
-}
-footer .footer-container .up-footer .col1 h2{
+footer .up-footer .col h2{
     font-size: var(--sub-header-size);
-    font-weight: var(--semi-bold);
-    color: var(--secondary-color);
-    margin: 16px 0;
+    font-weight: var(--bold);
+    color: var(--primary-color);
 }
-footer .footer-container .up-footer .col1 .social-media{
+footer .col1 .social-media{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
 }
-footer .footer-container .up-footer .col1 .social-media i{
-    font-size: 40px;
-    color: var(--secondary-color);
+footer .col1 .social-media i{
+    font-size: 25px;
     cursor: pointer;
 }
-footer .footer-container .up-footer .col1 p{
+footer .up-footer .col1 p{
     font-size: var(--base-text-size);
     font-family: var(--secondary-font);
-    margin-bottom: 20px
+    margin-bottom: 10px
 }
 footer .footer-container .up-footer .col h2{
-    color: var(--secondary-color);
     margin-bottom: 12px;
 }
 footer a{
-    display: block;
-    color: var(--white-light);
-    font-size: var(--medium-text-size);
-    padding-bottom: 20px;
+    color: #1E293BB2;
+    font-size: var(--base-text-size);
+    transition: .3s ease;
+}
+footer a:hover{
     text-decoration: underline;
 }
-footer .footer-container .up-footer .col3 h2{
-    color: var(--primary-color);
-}
-footer .footer-container .up-footer .col3 p{
-    color: var(--white-light);
-    font-size: var(--medium-text-size);
-    font-weight: var(--medium);
-    margin: 20px 0;
-}
-footer .footer-container .up-footer .col3 i{
-    font-size: var(--sub-header-size);
-    margin-right: 12px;
-}
-footer .footer-container .up-footer .col3 .f-phone-icon{
-    margin-bottom: 20px;
-}
-footer .footer-container .up-footer .col3 span{
-    font-size: var(--small-text-size);
-    font-family: var(--secondary-font);
-    color: var(--white-light);
-}
-footer .footer-container .up-footer .col3  .f-out-apps{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-footer .footer-container .up-footer .col3  .f-out-apps img{
-    width: 180px;
-    height: auto;
-    margin: -60px 0 0 -10px;
-    cursor: pointer;
-}
-footer .footer-container .down-footer{
+
+footer .down-footer{
     text-align: center;
     padding: 20px 0;
 }
 .down-footer :first-child{
-    color: var(--white-light);
-    font-size: var(--medium-text-size);
+    color: var(--text-color);
+    font-size: var(--base-text-size);
 }
 .down-footer :last-child{
     font-size: var(--small-text-size);
+    cursor: pointer;
 }
