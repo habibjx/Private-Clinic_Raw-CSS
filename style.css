@@ -431,23 +431,6 @@ section h1::after{
 .testo-wrapper .chevron-right{
     right: 0;
 }
-/* .testimonials > label > i{
-    color: var(--primary-color);
-    font-size: var(--sub-header-size);
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-} */
-/* 
-.testo-container{
-    width: 985px;
-    height: 220px;
-    margin: 57px 40px 0 40px;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-} */
 .testo-container{
     display: flex;
     gap: 20px;
@@ -494,32 +477,35 @@ section h1::after{
     margin-right: 3px;
 }
 
-/* about us section style start  */
-
-.about-container{
+/* ================= about us ================= */
+.about-wrapper{
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
     gap: 20px;
 }
-.about-us-text-container{
-    width: 501px;
-    padding: 0 16px 16px 16px;
+.about-wrapper > div{
+    flex: 1;
 }
-.about-us-text-container h3{
+.about-wrapper .map iframe{
+    width: 100%;
+    height: 400px;
+}
+.about-text h3{
     font-size: var(--header-size);
     font-weight: var(--bold);
 }
-.about-us-text-container p{
+.about-text p{
     font-family: var(--secondary-font);
     font-size: var(--regular);
     margin: 10px 0 40px 0;
 }
-.about-us-text-container .short-des h4{
+.about-text .short-des h4{
     color: var(--primary-color);
     font-size: var(--semi-bold);
     margin-bottom: 10px;
 }
-
-/* about us section style end */
 
 /* contact us section style start  */
 .contact-us{
