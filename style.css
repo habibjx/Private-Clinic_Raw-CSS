@@ -361,7 +361,7 @@ section h1::after{
 }
 .blog-wrapper .health-card{
     width: 235px;
-    height: fit-content;
+    height: 300px;
     overflow: hidden;
     cursor: pointer;
     border-radius: 10px;
@@ -376,7 +376,15 @@ section h1::after{
     border-radius: 10px 10px 0 0;
 }
 .health-card .health-text{
-    padding: 15px;
+    width: 90%;
+    height: 120px;
+    margin: auto;
+    overflow: hidden;
+}
+.health-text h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .health-text p{
     font-family: var(--secondary-font);
