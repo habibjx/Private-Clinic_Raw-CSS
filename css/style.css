@@ -69,7 +69,9 @@ h3{
     font-size: var(--medium-text-size);
     font-weight: var(--semi-bold);
 }
-
+.error{
+    border: 1px solid red !important; 
+}
 /*  =============== header section style start  =============== */
 header{
     width: 100%;
@@ -112,7 +114,8 @@ nav .nav-links{
     font-size: var(--medium);
     font-weight: bold;
 }
-header .menu{
+header .menu,
+header .menu-x{
     color: var(--white-light);
     font-size: var(--header-size);
     cursor: pointer;
@@ -237,8 +240,6 @@ section h1::after{
 .service-card{
     width: 285px;
     height: 470px;
-    transition: .3s;
-    cursor: default;
     border-radius: 10px;
     transition: 0.3s ease;
     box-shadow: var(--small-shadow);

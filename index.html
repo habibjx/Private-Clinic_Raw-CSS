@@ -27,7 +27,8 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-            <i class="fas fa-bars menu"></i>
+            <i id="menuIcon" class="fas fa-bars menu" onclick="navMenuOpenClose()"></i>
+           
 
         </nav>
 
@@ -413,7 +414,7 @@
         </section>
 
         <section>
-            <div class="card-header"><h1>About Us</h1></div>
+            <div class="card-header"><h1>Contact Us</h1></div>
             <div class="contact-container">
                 <div class="faqs-container">
                     <h2>Frequently Asked Questions</h2>
@@ -451,15 +452,15 @@
                     </div>
                 </div>
 
-                <form>
+                <form id="contactForm">
                     <h2>Have any Questions?</h2>
-                    <input type="text" name="patientName" placeholder="Enter Patient Name">
+                    <input type="text" name="patientName" id="patientName" placeholder="Enter Patient Name">
                     <input type="email" name="email" id="email" placeholder="Enter Your Email Address">
-                    <input type="text" name="phoneNumber" id="" placeholder="Enter Your Phone Number">
-                    <input type="text" placeholder="Subject">
-                    <textarea name="" id="" placeholder="Message" style="height: 100px;"></textarea>
+                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Your Phone Number">
+                    <input type="text" name="subject" oninput="handleTextValidation(this)" placeholder="Subject">
+                    <textarea name="message" id="" oninput="handleTextValidation(this)" placeholder="Message" style="height: 100px;"></textarea>
                     <div class="form-checkbox">
-                        <input type="checkbox" name="" id="patient-checkbox"> 
+                        <input type="checkbox" name="checkbox" id="patient-checkbox"> 
                         <label for="patient-checkbox">
                         </label>
                         <span>I'm Patient</span>
@@ -562,6 +563,7 @@
         </div>
     </footer>
 
-    
+    <!-- javaScript file  -->
+     <script src="./app.js"></script>
 </body>
 </html>
