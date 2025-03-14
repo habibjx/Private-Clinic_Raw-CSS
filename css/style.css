@@ -207,7 +207,7 @@ section h1::after{
 .bottom-border::before{
     position: absolute;
     content: "";
-    width: 85%;
+    width: 80%;
     height: 1px;
     background: var(--primary-color);
     bottom: 50%;
@@ -428,6 +428,7 @@ section h1::after{
 .testo-wrapper{
     margin-top: 30px;
     position: relative;
+    overflow: hidden;
 }
 .chevron-left,
 .chevron-right{
@@ -458,11 +459,12 @@ section h1::after{
     right: 0;
 }
 .testo-container{
+    width: 1220px;
     display: flex;
     gap: 20px;
 }
 .testo-container .testo-card{
-    width: 285px;
+    width: 285px; /*   every card width: 305 */
     height: 170px;
     box-shadow: var(--small-shadow);
     border-radius: 8px;

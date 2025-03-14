@@ -26,3 +26,61 @@
         padding: 0 20px;
     }
 }
+
+@media only screen and (max-width: 700px){
+    section{
+        margin-top: 50px;
+    }
+    .bottom-border::before{
+        width: 70%;
+    }
+    header{
+        border: 1px solid red;
+        padding: 20px 10%;
+    }
+    nav .logo {
+        margin: 0;
+    }
+    header .menu {
+        margin: 0;
+    }
+    .main-header {
+        padding: 0;
+        margin: 0;
+    }
+    .main-header h1 {
+        margin-top: 80px;
+    }
+    .services-wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-card {
+        width: auto;
+        height: 400px;
+    }
+    .doctor-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .doctor-profile {
+        width: auto;
+        height: 470px;
+    }
+    .blog-wrapper .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-wrapper .health-card {
+        width: auto;
+        height: 300px;
+    }
+    .blog-wrapper .health-categories {
+        box-shadow: var(--small-shadow);
+        padding: 0 0 0 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
