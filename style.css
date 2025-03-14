@@ -459,19 +459,21 @@ section h1::after{
     width: 285px;
     height: 170px;
     box-shadow: var(--small-shadow);
-    position: relative;
     border-radius: 8px;
     margin-top: 20px;
+    position: relative;
 }
-
-.testo-card img{
+.testo-card .testo-img{
     width: 80px;
     height: 80px;
-    border: 3px solid var(--primary-color);
     border-radius: 50%;
     position: absolute;
     top: -20px;
     left: 10px;
+    border: 3px solid var(--primary-color);
+}
+.testo-card img{
+    border-radius: 50%;
 }
 .testo-card h4{
     margin-left: 35%;
