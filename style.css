@@ -236,6 +236,7 @@ section h1::after{
     border-radius: 10px;
     transition: 0.3s ease;
     box-shadow: var(--small-shadow);
+    overflow: hidden;
 }
 .service-card:hover{
     box-shadow: 0 4px 10px #31d6995d;
