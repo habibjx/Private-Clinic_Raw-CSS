@@ -462,6 +462,7 @@ section h1::after{
     width: 1220px;
     display: flex;
     gap: 20px;
+    padding: 5px 0;
 }
 .testo-container .testo-card{
     width: 285px; /*   every card width: 305 */

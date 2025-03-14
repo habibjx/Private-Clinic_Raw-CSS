@@ -35,7 +35,6 @@
         width: 70%;
     }
     header{
-        border: 1px solid red;
         padding: 20px 10%;
     }
     nav .logo {
@@ -82,5 +81,66 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px){
+   
+    .bottom-border{
+        text-align: center;
+    }
+    .bottom-border::before{
+        display: none;
+    }
+    header{
+        height: 100vh;
+    }
+    .main-header h1 {
+        margin-top: 40px;
+    }
+    .main-header .call-to-action {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .call-to-action > :last-child {
+        margin-left:0;
+    }
+    .blog-wrapper .health-categories {
+       display: none;
+    }
+    .services-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .doctor-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-wrapper {
+        flex-direction: column-reverse;
+    }
+    .about-wrapper > div{
+        width: 100%;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .testo-wrapper {
+        
+    }
+
+    footer .footer-container {
+        padding-top: 40px;
+    }
+    footer .col {
+        max-width: 100%;
+        width: 100%;
+    }
+    footer .app {
+        flex-direction: row;
+    }
+    footer .app img:last-child {
+        margin-top: 37px;
+        height: 45px;
     }
 }
