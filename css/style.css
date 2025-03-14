@@ -112,6 +112,12 @@ nav .nav-links{
     font-size: var(--medium);
     font-weight: bold;
 }
+header .menu{
+    color: var(--white-light);
+    font-size: var(--header-size);
+    cursor: pointer;
+    display: none;
+}
 /* ======== navigation bar style end ======== */
 
 /* =========  main header style  ========= */
