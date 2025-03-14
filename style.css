@@ -275,6 +275,7 @@ section h1::after{
     cursor: pointer;
     transition: .3s ease;
     box-shadow: var(--small-shadow);
+    overflow: hidden;
 }
 .doctor-profile:hover{
     box-shadow: 0 4px 10px #31d6995d;
@@ -322,9 +323,20 @@ section h1::after{
 }
 
 .doctor-profile .doc-text{
-    padding: 20px;
+    width: 90%;
+    height: 150px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.doc-text h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .doc-text h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 8px 0;
 }
 .doc-text p{
