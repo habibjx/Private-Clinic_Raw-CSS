@@ -673,8 +673,24 @@ footer .col{
     display: flex;
     flex-direction: column;
 }
-footer .col1{
-    
+footer .social-media i{
+    transition: .3s ease;
+}
+footer .social-media i:hover{
+    transform: scale(1.2);
+}
+footer .app{
+    display: flex;
+    flex-direction: column;
+}
+footer .app img{
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    margin-left: -8px;
+}
+footer .app img:last-child{
+    margin-top: -35px;
 }
 footer .up-footer .col h2{
     font-size: var(--sub-header-size);
