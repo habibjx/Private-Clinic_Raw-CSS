@@ -480,7 +480,10 @@ section h1::after{
     padding-top: 10px;
     font-size: var(--sub-header-size);
     font-weight: var(--semi-bold);
-    color: var(--primary-color);
+    color: var(--primary-color);    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .testo-card p{
     font-size: var(--small-text-size);
