@@ -6,7 +6,8 @@
  */
 
 // Global Variable 
-let isToggleClose= true
+let isToggleClose= true;
+let isFormValidate = true;
 
 
 window.onload = () => {
@@ -26,29 +27,9 @@ function main(){
     patientName.addEventListener('input', (e) => handleNameValidation(e, patientName));
     email.addEventListener('input', (e) => handleEmailValidation(e, email));
     phoneNumber.addEventListener('input', (e) => handleNumberValidation(e, phoneNumber));
+    contactForm.addEventListener('submit', (e) => handleForm(e));
 
 
-    contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const patientName = event.target.patientName.value;
-        const email = event.target.email.value;
-        const phoneNumber = event.target.phoneNumber.value;
-        const subject = event.target.subject.value;
-        const message = event.target.message.value;
-        const isPatient = event.target.checkbox.checked;
-
-
-        const contactMail = {
-            patientName,
-            email,
-            phoneNumber,
-            subject,
-            message,
-            isPatient
-        }
-        console.log(contactMail)
-    
-    })
 }
 //Event handler ========================
 
@@ -70,6 +51,29 @@ function handleNumberValidation(event, parent){
 function handleTextValidation(parent){
     const isValidate = textValidation(parent.value);
     formErrorMsgDisplay(isValidate, parent);
+}
+
+function handleForm(event){
+    event.preventDefault();
+    if(!isFormValidate) return alert('Please complete it with valid data.');
+    const patientName = event.target.patientName.value;
+    const email = event.target.email.value;
+    const phoneNumber = event.target.phoneNumber.value;
+    const subject = event.target.subject.value;
+    const message = event.target.message.value;
+    const isPatient = event.target.checkbox.checked;
+    if (patientName === '' || email === '' || phoneNumber === '' || subject === '' || message === '') return alert('Please fill in all the requirements.');
+
+    const contactMail = {
+        patientName,
+        email,
+        phoneNumber,
+        subject,
+        message,
+        isPatient
+    }
+    console.log(contactMail)
+
 }
 
 // DOM Function ======================
@@ -102,9 +106,11 @@ function navMenuOpenClose(){
 function formErrorMsgDisplay(isValidate, parent){
     if(!isValidate){
         parent.classList.add('error');
+        isFormValidate = false;
     }
     else{
         parent.classList.remove('error');
+        isFormValidate = true;
     }
 }
 
@@ -112,7 +118,6 @@ function formErrorMsgDisplay(isValidate, parent){
 //Utils function =========================
 
 function validationName(name){
-    console.log(name, 'name')
     const regex = /^[A-Za-z ]{2,}$/;
     return regex.test(name);
 }
