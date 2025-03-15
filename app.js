@@ -8,6 +8,7 @@
 // Global Variable 
 let isToggleClose= true;
 let isFormValidate = true;
+let testSliderWidth = 0;
 
 
 window.onload = () => {
@@ -22,6 +23,8 @@ function main(){
     const email = document.getElementById('email');
     const phoneNumber = document.getElementById('phoneNumber');
     const faqContainer = document.querySelector('.faqs-container');
+    const chevronRight = document.querySelector('.chevron-right');
+    const chevronLeft = document.querySelector('.chevron-left');
 
     
     //Event Listener
@@ -29,18 +32,9 @@ function main(){
     email.addEventListener('input', (e) => handleEmailValidation(e, email));
     phoneNumber.addEventListener('input', (e) => handleNumberValidation(e, phoneNumber));
     contactForm.addEventListener('submit', (e) => handleForm(e));
-
-    faqContainer.addEventListener('click', (e) => {
-        const header = e.target.closest('.faq-header')
-        if(header){
-            const parent = header.closest('.faq-box');
-            const i = parent.querySelector('i');
-            const p = parent.querySelector('p');
-            i.classList.toggle('rotate');
-            p.style.display = p.style.display === 'block' ? 'none' : 'block';
-        }
-
-    })
+    faqContainer.addEventListener('click', (e) => handleFAQAction(e));
+    chevronRight.addEventListener('click', () => handleChevronRight(chevronRight));
+    chevronLeft.addEventListener('click', handleChevronLeft);
 
 }
 //Event handler ========================
@@ -84,8 +78,26 @@ function handleForm(event){
         message,
         isPatient
     }
-    console.log(contactMail)
+}
 
+function handleFAQAction(e){
+    const header = e.target.closest('.faq-header')
+    if(header){
+        const parent = header.closest('.faq-box');
+        const i = parent.querySelector('i');
+        const p = parent.querySelector('p');
+        i.classList.toggle('rotate');
+        p.style.display = p.style.display === 'block' ? 'none' : 'block';
+    }
+}
+
+function handleChevronRight(){
+    testSliderWidth += -305
+    testimonialSlider()
+}
+function handleChevronLeft(){
+    testSliderWidth += +305
+    testimonialSlider()
 }
 
 // DOM Function ======================
@@ -126,6 +138,12 @@ function formErrorMsgDisplay(isValidate, parent){
     }
 }
 
+
+function testimonialSlider(){
+    const parent = document.querySelector('.testo-container');
+    parent.style.marginLeft = testSliderWidth + 'px';
+
+}
 
 //Utils function =========================
 

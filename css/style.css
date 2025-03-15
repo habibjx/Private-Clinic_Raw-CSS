@@ -430,8 +430,8 @@ section h1::after{
     position: relative;
     overflow: hidden;
 }
-.chevron-left,
-.chevron-right{
+.chevron-left i,
+.chevron-right i{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -444,25 +444,28 @@ section h1::after{
     place-content: center;
     cursor: pointer;
     transition: .3s ease;
+    display: grid;
+    place-content: center;
 }
 .chevron-left:hover,
-.chevron-right:hover{
-    
+.chevron-right:hover{  
     background:  var(--secondary-color);
     color: var(--text-color);
 }
 
-.testo-wrapper .chevron-left{
+.testo-wrapper .chevron-left i{
     left: 0;
 }
-.testo-wrapper .chevron-right{
+.testo-wrapper .chevron-right i{
     right: 0;
 }
 .testo-container{
-    width: 1220px;
+    /* width: 1220px; */
+    width: fit-content;
     display: flex;
     gap: 20px;
     padding: 5px 0;
+    transition: .5s ease;
 }
 .testo-container .testo-card{
     width: 285px; /*   every card width: 305 */
