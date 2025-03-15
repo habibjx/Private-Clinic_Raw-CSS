@@ -21,6 +21,7 @@ function main(){
     const patientName = document.getElementById('patientName');
     const email = document.getElementById('email');
     const phoneNumber = document.getElementById('phoneNumber');
+    const faqContainer = document.querySelector('.faqs-container');
 
     
     //Event Listener
@@ -29,6 +30,17 @@ function main(){
     phoneNumber.addEventListener('input', (e) => handleNumberValidation(e, phoneNumber));
     contactForm.addEventListener('submit', (e) => handleForm(e));
 
+    faqContainer.addEventListener('click', (e) => {
+        const header = e.target.closest('.faq-header')
+        if(header){
+            const parent = header.closest('.faq-box');
+            const i = parent.querySelector('i');
+            const p = parent.querySelector('p');
+            i.classList.toggle('rotate');
+            p.style.display = p.style.display === 'block' ? 'none' : 'block';
+        }
+
+    })
 
 }
 //Event handler ========================
