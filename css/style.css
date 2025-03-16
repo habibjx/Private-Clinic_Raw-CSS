@@ -40,8 +40,10 @@
     --bold: 700;
 
 }
-body{
+html{
     scroll-behavior: smooth;
+}
+body{
     width: 100%;
     max-width: 1840px;
     margin: auto;
