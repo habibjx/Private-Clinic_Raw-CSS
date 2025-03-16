@@ -110,16 +110,6 @@ function navMenuOpenClose(){
     const navMenu = document.querySelector('.nav-links');
     const menuIcon = document.getElementById('menuIcon');
     navMenu.classList.toggle('open');
-
-    if(isToggleClose){
-        isToggleClose = false;
-        menuIcon.classList.remove('fas', 'fa-bars');
-        menuIcon.classList.add('fa-solid', 'fa-xmark');
-    }else{
-        isToggleClose = true;
-        menuIcon.classList.remove('fa-solid', 'fa-xmark');
-        menuIcon.classList.add('fas', 'fa-bars');
-    }
 }
 
 /**

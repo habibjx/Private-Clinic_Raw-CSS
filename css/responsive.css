@@ -8,6 +8,12 @@
         display: block;
         margin-right: 95px;
     }
+    header .fa-xmark{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
     nav .nav-links {
         position: fixed;
         width: fit-content;

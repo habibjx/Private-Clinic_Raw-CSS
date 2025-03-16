@@ -116,7 +116,7 @@ nav .nav-links{
     font-weight: bold;
 }
 header .menu,
-header .menu-x{
+header .fa-xmark{
     color: var(--white-light);
     font-size: var(--header-size);
     cursor: pointer;
